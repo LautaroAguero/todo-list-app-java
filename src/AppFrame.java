@@ -32,6 +32,39 @@ public class AppFrame extends JFrame {
                 list.add(task);
                 list.indexNum();
                 revalidate();
+
+                JButton done = task.getDone();
+                done.addMouseListener(new MouseAdapter() {
+                    @Override
+                    public void mousePressed(MouseEvent e) {
+                        task.doneStatus();
+                        revalidate();
+                    }
+                });
+
+                JButton remove = task.getRemove();
+                remove.addMouseListener(new MouseAdapter() {
+                    @Override
+                    public void mousePressed(MouseEvent e) {
+                        list.remove(task);
+                        list.indexNum();
+                        revalidate();
+                        repaint();
+                    }
+                });
+            }
+        });
+        clearTask.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                Component[] taskList = list.getComponents();
+                for (int i = 0; i < taskList.length; i++) {
+                    if (taskList[i] instanceof Task) {
+                        list.remove((Task)taskList[i]);
+                    }
+                }
+                revalidate();
+                repaint();
             }
         });
     }
