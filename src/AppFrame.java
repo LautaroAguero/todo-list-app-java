@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class AppFrame extends JFrame {
 
@@ -21,6 +23,16 @@ public class AppFrame extends JFrame {
         addTask = buttonPanel.getAddTaskButton();
         clearTask = buttonPanel.getClearTaskButton();
 
-
+        addlistner();
+    }
+    public void addlistner() {
+        addTask.addMouseListener(new MouseAdapter() {
+            public void mousePressed(MouseEvent e) {
+                Task task = new Task();
+                list.add(task);
+                list.indexNum();
+                revalidate();
+            }
+        });
     }
 }
