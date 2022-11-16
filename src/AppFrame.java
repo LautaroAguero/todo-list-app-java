@@ -14,6 +14,7 @@ public class AppFrame extends JFrame {
 
     public AppFrame () {
         this.setSize(400,700);
+        this.setTitle("TO-DO LIST by Agüero/Conci");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setVisible(true);
         this.add(this.title, BorderLayout.NORTH);
