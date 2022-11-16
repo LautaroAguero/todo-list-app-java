@@ -12,12 +12,12 @@ public class Task extends JPanel {
 
         GridBagLayout layoutTask = new GridBagLayout();
         this.setPreferredSize(new Dimension(400,20));
-        this.setBackground(new Color(255,234,17));
+        this.setBackground(new Color(255, 255, 255));
         this.setLayout(layoutTask);
 
         index = new JLabel("");
         index.setHorizontalAlignment(JLabel.LEFT);
-        index.setBackground(new Color(255,234,17));
+        index.setBackground(new Color(255, 255, 255));
         GridBagConstraints contenido0 = new GridBagConstraints();
         contenido0.gridy = 0;
         contenido0.gridwidth = 1;
@@ -26,7 +26,7 @@ public class Task extends JPanel {
 
         taskName = new JTextField("Ingrese una tarea...");
         taskName.setBorder(BorderFactory.createEmptyBorder());
-        taskName.setBackground(new Color(255,234,17));
+        taskName.setBackground(new Color(255, 255, 255));
         GridBagConstraints contenido1 = new GridBagConstraints();
         contenido1.gridx = 1;
         contenido1.gridwidth = 1;
@@ -65,11 +65,11 @@ public class Task extends JPanel {
     }
 
     public void doneStatus(){
-        this.taskName.setBackground(Color.green);
-        this.index.setBackground(Color.green);
-        this.remove.setBackground(Color.green);
-        this.done.setBackground(Color.green);
-        this.setBackground(Color.green);
+        this.taskName.setBackground(new Color(107, 179, 107));
+        this.index.setBackground(new Color(107, 179, 107));
+        this.remove.setBackground(new Color(107, 179, 107));
+        this.done.setBackground(new Color(107, 179, 107));
+        this.setBackground(new Color(107, 179, 107));
         revalidate();
     }
 
