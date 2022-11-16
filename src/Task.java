@@ -12,12 +12,13 @@ public class Task extends JPanel {
 
         GridBagLayout layoutTask = new GridBagLayout();
         this.setPreferredSize(new Dimension(400,20));
-        this.setBackground(new Color(255, 255, 255));
+        this.setBackground(new Color(196, 202, 161));
+        this.setBorder(BorderFactory.createLineBorder(Color.black,1));
         this.setLayout(layoutTask);
 
         index = new JLabel("");
         index.setHorizontalAlignment(JLabel.LEFT);
-        index.setBackground(new Color(255, 255, 255));
+        index.setBackground(new Color(196, 202, 161));
         GridBagConstraints contenido0 = new GridBagConstraints();
         contenido0.gridy = 0;
         contenido0.gridwidth = 1;
@@ -26,7 +27,7 @@ public class Task extends JPanel {
 
         taskName = new JTextField("Ingrese una tarea...");
         taskName.setBorder(BorderFactory.createEmptyBorder());
-        taskName.setBackground(new Color(255, 255, 255));
+        taskName.setBackground(new Color(196, 202, 161));
         GridBagConstraints contenido1 = new GridBagConstraints();
         contenido1.gridx = 1;
         contenido1.gridwidth = 1;
@@ -35,6 +36,8 @@ public class Task extends JPanel {
         this.add(taskName, contenido1);
 
         done = new JButton("Hecho");
+        done.setBackground(new Color(186, 202, 78));
+        done.setBorder(BorderFactory.createLineBorder(Color.black,1));
         GridBagConstraints contenido2 = new GridBagConstraints();
         contenido2.gridx = 2;
         contenido2.gridwidth = 1;
@@ -43,6 +46,8 @@ public class Task extends JPanel {
         this.add(this.done,contenido2);
 
         remove = new JButton("Remover");
+        remove.setBackground(new Color(233, 156, 139));
+        remove.setBorder(BorderFactory.createLineBorder(Color.black,1));
         GridBagConstraints contenido3 = new GridBagConstraints();
         contenido3.gridx = 3;
         contenido3.gridwidth = 1;
@@ -67,7 +72,7 @@ public class Task extends JPanel {
     public void doneStatus(){
         this.taskName.setBackground(new Color(107, 179, 107));
         this.index.setBackground(new Color(107, 179, 107));
-        this.remove.setBackground(new Color(107, 179, 107));
+        this.remove.setBackground(new Color(233, 156, 139));
         this.done.setBackground(new Color(107, 179, 107));
         this.setBackground(new Color(107, 179, 107));
         revalidate();
