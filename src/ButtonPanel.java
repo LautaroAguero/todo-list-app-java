@@ -11,7 +11,7 @@ public class ButtonPanel extends JPanel {
         this.setBackground(new Color(153, 179, 135));
         this.setBorder(BorderFactory.createLineBorder(Color.black,1));
 
-        addTask = new JButton("Add Task");
+        addTask = new JButton("Agregar Tarea");
         addTask.setFont(new Font("Sans-serif",Font.PLAIN,20));
         addTask.setBackground(new Color(186, 202, 78));
         addTask.setBorder(BorderFactory.createLineBorder(Color.black,1));
@@ -21,7 +21,7 @@ public class ButtonPanel extends JPanel {
 
         this.add(Box.createVerticalStrut(20));
 
-        clearTask = new JButton("Clear Tasks");
+        clearTask = new JButton("Eliminar Tareas");
         clearTask.setFont(new Font("Sans-serif",Font.PLAIN,20));
         clearTask.setBackground(new Color(233, 156, 139));
         clearTask.setBorder(BorderFactory.createLineBorder(Color.black,1));
